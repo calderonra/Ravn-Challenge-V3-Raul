@@ -19,16 +19,27 @@
         android:textStyle="bold">
     </TextView>
     <TextView
-        android:id="@+id/homeworld"
+        android:id="@+id/species"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@+id/person_name"
         app:layout_constraintBottom_toBottomOf="parent"
-        tools:text="homeworld"
+        tools:text="species"
         android:layout_marginTop="8dp"
         android:layout_marginStart="20dp"
         android:textSize="18sp">
     </TextView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/homeworld"
+        app:layout_constraintTop_toBottomOf="@+id/person_name"
+        android:layout_marginStart="150dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:text="homeworld">
+    </TextView>
+
     <View
         android:id="@+id/divider"
         android:layout_width="0dp"

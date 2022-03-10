@@ -25,6 +25,7 @@ class PersonListAdapter(private val launches: List<AllTodosQuery.Person>,val con
         //holder.binding.personName.text=launch.name ?:""
         holder.bind(launches[position])
 
+
     }
 
     override fun getItemCount(): Int {
@@ -37,7 +38,10 @@ class PersonListAdapter(private val launches: List<AllTodosQuery.Person>,val con
 
                 Toast.makeText(context, "${person.name}", Toast.LENGTH_LONG).show()
             }
+
+
             binding.personName.text = person.name
+            binding.species.text=if (person.species?.name.toString() == "null") "Human "+" from "+person.homeworld?.name.toString() else person.species?.name.toString()+" from "+person.homeworld?.name.toString()
 
         }
     }
