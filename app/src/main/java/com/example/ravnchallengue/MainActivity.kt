@@ -14,8 +14,6 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
-
-
         supportFragmentManager.beginTransaction()
             .replace(R.id.frameLayoutContainer, PersonListFragment::class.java.newInstance(), "Fragment")
             .commit()

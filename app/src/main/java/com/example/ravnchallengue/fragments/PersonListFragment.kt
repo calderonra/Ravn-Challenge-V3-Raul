@@ -12,7 +12,7 @@ import com.apollographql.apollo3.ApolloClient
 import com.apollographql.apollo3.exception.ApolloException
 import com.example.ravnChallengue.AllTodosQuery
 import com.example.ravnchallengue.Adapter.PersonListAdapter
-import com.example.ravnchallengue.client.Apollo
+
 
 import com.example.ravnchallengue.databinding.PersonListFragmentBinding
 

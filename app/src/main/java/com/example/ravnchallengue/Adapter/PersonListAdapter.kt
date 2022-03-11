@@ -19,7 +19,7 @@ import com.example.ravnchallengue.databinding.PersonItemBinding
 
 class PersonListAdapter(private val launches: List<AllTodosQuery.Person>,val context : Context):RecyclerView.Adapter<PersonListAdapter.ViewHolder> (){
 
-lateinit var sharedPreferences: SharedPreferences
+    private lateinit var sharedPreferences: SharedPreferences
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
 
@@ -27,16 +27,10 @@ lateinit var sharedPreferences: SharedPreferences
         sharedPreferences= context.getSharedPreferences("MySP", Activity.MODE_PRIVATE)
 
         return ViewHolder(binding)
-
-
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-       // val launch =
-        //holder.binding.personName.text=launch.name ?:""
         holder.bind(launches[position])
-
-
     }
 
     override fun getItemCount(): Int {
@@ -48,19 +42,13 @@ lateinit var sharedPreferences: SharedPreferences
 
         fun bind(person : AllTodosQuery.Person){
             binding.root.setOnClickListener {
-
                 val editor=sharedPreferences.edit()
                 editor.putString("ID", person.id)
                 editor.apply()
-
                 val intent=Intent(context, PersonDetail::class.java)
                 context.startActivity(intent)
 
-                   // startAct
-
-                //Toast.makeText(context, "${person.id}", Toast.LENGTH_LONG).show()
             }
-
             binding.personName.text = person.name
             binding.species.text=if (person.species?.name.toString() == "null") "Human "+" from "+person.homeworld?.name.toString() else person.species?.name.toString()+" from "+person.homeworld?.name.toString()
 
