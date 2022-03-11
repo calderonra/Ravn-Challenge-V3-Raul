@@ -3,6 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/rauli/AndroidStudioProjects/Ravn-Challenge-V3-Raul/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/rauli/AndroidStudioProjects/Ravn-Challenge-V3-Raul/app/src/main/res/layout/activity_person_detail.xml" value="0.358695652173913" />
+        <entry key="..\:/Users/rauli/AndroidStudioProjects/Ravn-Challenge-V3-Raul/app/src/main/res/layout/person_details.xml" value="0.1" />
+        <entry key="..\:/Users/rauli/AndroidStudioProjects/Ravn-Challenge-V3-Raul/app/src/main/res/layout/person_item.xml" value="0.358695652173913" />
+        <entry key="..\:/Users/rauli/AndroidStudioProjects/Ravn-Challenge-V3-Raul/app/src/main/res/layout/person_list_fragment.xml" value="0.358695652173913" />
         <entry key="..\:/Users/rauli/AndroidStudioProjects/ravnChallengue/app/src/main/res/drawable/ic_baseline_chevron_right_24.xml" value="0.1955" />
         <entry key="..\:/Users/rauli/AndroidStudioProjects/ravnChallengue/app/src/main/res/layout/activity_main.xml" value="0.22" />
         <entry key="..\:/Users/rauli/AndroidStudioProjects/ravnChallengue/app/src/main/res/layout/activity_person_detail.xml" value="0.18802083333333333" />

@@ -13,6 +13,7 @@
         android:theme="@style/Theme.RavnChallengue">
         <activity
             android:name=".PersonDetail"
+            android:theme="@style/Theme.Design.NoActionBar"
             android:exported="true" />
         <activity
             android:name=".MainActivity"

@@ -1,67 +1,130 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".PersonDetail">
 
-
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="10dp"
+    android:id="@+id/generalInformation">
     <TextView
         android:id="@+id/textView6"
         android:layout_width="match_parent"
         android:layout_height="45dp"
-        android:layout_weight="1"
+        android:textAlignment="center"
         android:text="General Information" />
-
-    <TextView
-        android:id="@+id/eyeColor"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="Eye Color" />
-
-    <TextView
-        android:id="@+id/skinColor"
-        android:layout_width="match_parent"
-        android:layout_height="45dp"
-        android:layout_weight="1"
-        android:text="Skin Color" />
-
-    <TextView
-        android:id="@+id/hairColor"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="Hair Color" />
-
-    <TextView
-        android:id="@+id/birthYear"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="Birth Year" />
-
-    <TextView
-        android:id="@+id/vehicles"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="Vehicles" />
-
-    <TextView
-        android:id="@+id/textView8"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="TextView" />
-
-    <TextView
-        android:id="@+id/textView10"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="TextView" />
-
-
 </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/generalInformation"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/eyeColor2"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:layout_weight="1"
+                android:text="Eye Color" />
+
+            <TextView
+                android:id="@+id/eyeColor"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:layout_weight="1"
+                android:text="Eye Color description " />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/skinColor2"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+
+                android:text="Skin Color" />
+
+            <TextView
+                android:id="@+id/skinColor"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="65dp"
+                android:text="Skin Color description" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/hairColor2"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:layout_weight="1"
+                android:text="Hair Color" />
+            <TextView
+                android:id="@+id/hairColor"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:layout_weight="1"
+                android:text="Hair Color Description" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/birthYear2"
+                    android:layout_width="match_parent"
+                    android:layout_height="65dp"
+                    android:layout_weight="1"
+                    android:text="Birth Year" />
+
+                <TextView
+                    android:id="@+id/birthYear"
+                    android:layout_width="match_parent"
+                    android:layout_height="65dp"
+                    android:layout_weight="1"
+                    android:text="Birth Year Description" />
+        </LinearLayout>
+        <TextView
+            android:id="@+id/vehicles"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+android:textAlignment="center"
+            android:text="Vehicles" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+
+            android:text="TextView" />
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+
+            android:text="TextView" />
+
+    </LinearLayout>
+</RelativeLayout>

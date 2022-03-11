@@ -47,6 +47,21 @@ class PersonDetail : AppCompatActivity() {
                 binding.eyeColor.text = launches.eyeColor
                 binding.skinColor.text = launches.skinColor
                 binding.hairColor.text = launches.hairColor
+                if (launches.vehicleConnection?.vehicles?.isEmpty() == true){
+                    binding.vehicle.text= "N/A"
+                    binding.vehicle2.text= "N/A"
+                }else{
+
+                    if (launches.vehicleConnection?.vehicles?.size==1){
+                        binding.vehicle.text= launches.vehicleConnection?.vehicles?.get(0)?.name.toString()
+                        binding.vehicle2.text= "N/A"
+                    }else{
+                        binding.vehicle.text= launches.vehicleConnection?.vehicles?.get(0)?.name.toString()
+                        binding.vehicle2.text=launches.vehicleConnection?.vehicles?.get(1)?.name.toString()
+                    }
+                }
+
+
             }
         }
 
