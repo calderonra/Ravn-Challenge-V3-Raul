@@ -3,6 +3,7 @@ query AllTodos {
 
     allPeople{
         people{
+            id
             name
             species{
                 name

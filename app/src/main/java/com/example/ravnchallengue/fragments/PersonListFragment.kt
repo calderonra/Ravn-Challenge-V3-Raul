@@ -8,10 +8,12 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.apollographql.apollo3.ApolloClient
 import com.apollographql.apollo3.exception.ApolloException
 import com.example.ravnChallengue.AllTodosQuery
 import com.example.ravnchallengue.Adapter.PersonListAdapter
-import com.example.ravnchallengue.client.apolloClient
+import com.example.ravnchallengue.client.Apollo
+
 import com.example.ravnchallengue.databinding.PersonListFragmentBinding
 
 class PersonListFragment:Fragment() {
@@ -20,7 +22,7 @@ class PersonListFragment:Fragment() {
     // This property is only valid between onCreateView and
     // onDestroyView.
     private val binding get() = _binding!!
-    var personListAdapter: PersonListAdapter? = null
+    //var personListAdapter: PersonListAdapter? = null
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -41,7 +43,7 @@ class PersonListFragment:Fragment() {
 
             val launches = response?.data?.allPeople?.people?.filterNotNull()
             if (launches != null && !response.hasErrors()) {
-                personListAdapter = PersonListAdapter(launches, requireContext())
+                var personListAdapter = PersonListAdapter(launches, requireContext())
                 // Log.d("personList", "Success ${response.data}")
                 _binding!!.launches.layoutManager = LinearLayoutManager(requireContext())
                 _binding!!.launches.adapter = personListAdapter
@@ -49,6 +51,11 @@ class PersonListFragment:Fragment() {
         }
 
         return view
+    }    companion object{
+        val apolloClient = ApolloClient.Builder()
+            .serverUrl("https://swapi-graphql.netlify.app/.netlify/functions/index")
+            .build()
+
     }
 
 }
